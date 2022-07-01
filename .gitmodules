@@ -1,0 +1,6 @@
+[submodule "Assets/Assemblies/cratesmith.widgets"]
+	path = Assets/Assemblies/cratesmith.widgets
+	url = https://github.com/Cratesmith/cratesmith.widgets.git
+[submodule "Assets/Assemblies/cratesmith.assetui"]
+	path = Assets/Assemblies/cratesmith.assetui
+	url = https://github.com/Cratesmith/Cratesmith.AssetUI.git
