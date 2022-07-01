@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bb7e9786cd879ef498e231b14c1c3607
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Optima nova LT Black
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 19334eccfef6c2849afe2e65f48c3bf1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
