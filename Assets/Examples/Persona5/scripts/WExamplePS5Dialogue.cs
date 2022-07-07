@@ -78,31 +78,41 @@ public class WExamplePS5Dialogue : WidgetBehaviour
 	public WidgetPrefab<WText>  m_WTextDialogue;
 	public WidgetPrefab<WImage> m_WImageTextBox;
 	public WidgetPrefab<WImage> m_WImagePortrait;
+	bool                      m_ShowText = true;
 
 	protected override void OnRefresh(ref WidgetBuilder builder)
 	
 	{
 		builder.Widget(m_WImagePortrait);
 
-		builder.Widget(m_WImageTextBox);
-		
-		builder.Widget(m_WTextName)
-				.State(new SText()
-				{
-					text = m_SpeakerName,
-				});
+		//builder.Widget(m_WImageTextBox);
 
-		builder.Widget(m_WTextDialogue)
+		if (m_ShowText)
+		{
+			builder.Widget(m_WTextDialogue)
 				.State(new SText()
 				{
 					text = m_CurrentLine>=0 && m_CurrentLine < m_DialogueLine.Length 
 						? m_DialogueLine[m_CurrentLine]
 						: ""
 				});
+
+			builder.Widget(m_WTextName)
+				.State(new SText()
+				{
+					text = m_SpeakerName,
+				});
+		}
 	}
 
 	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.Tab))
+		{
+			m_ShowText = !m_ShowText;
+			SetDirty();
+		}
+		
 		if (Input.GetKeyDown(KeyCode.Return))
 		{
 			m_CurrentLine = m_DialogueLine.Length > 0
